@@ -16,7 +16,7 @@ function HeroSection() {
 
   return (
     <main
-      className="flex p-10 md:p-40 justify-between gap-10 bg-blend-overlay bg-[#000000e4] bg-[url(image/peper.png)] bg-cover items-center bg-center w-full h-[100vh] max-h-[800px] text-white"
+      className="flex p-10 md:p-40 justify-between gap-10 bg-blend-overlay bg-[#000000e4] bg-[url(/image/peper.png)] bg-cover items-center bg-center w-full h-[100vh] max-h-[800px] text-white"
       style={{ fontFamily: "poppins" }}
     >
       {/* Left Content */}
