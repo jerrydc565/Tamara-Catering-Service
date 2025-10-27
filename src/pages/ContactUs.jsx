@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import MapEmbeded from "../components/MapEmbeded";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -12,10 +12,26 @@ const fadeUp = {
 };
 
 function ContactUs() {
-  // Always scroll to top when this component is rendered
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  const [isLoading, setIsLoading] = useState(true);
+  
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 3000); // Simulate a 3-second loading time
+  
+      return () => clearTimeout(timer); // Cleanup the timer on unmount
+    }, []);
+  
+    if (isLoading) {
+      return (
+        <div className=" flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="text-center">
+            <div className="inline-block animate-spin rounded-full h-32 w-32 border-t-4 border-b-4 border-[#FFBB00] mb-4 "></div>
+            <h2 className="text-2xl font-semibold text-[#FFBB00]">Loading...</h2>
+          </div>
+        </div>
+      );
+    }
 
   return (
     <main style={{ fontFamily: "poppins" }}>

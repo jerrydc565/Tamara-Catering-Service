@@ -6,24 +6,29 @@
 .food-change {
   animation-name: foodImg;
   animation-timing-function: linear;
-  animation-duration: 20s;
+  animation-duration: 50s;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   
 }
 
+
 @keyframes foodImg {
   100%, 20% {
     background-image: url("/image/chicken.png");
   }
+
   40% {
     background-image: url("/image/egusi.png");
   }
+
   60% {
     background-image: url("/image/jellof.png");
   }
+
   80% {
     background-image: url("/image/pondo.png");
   }
+
 }
 

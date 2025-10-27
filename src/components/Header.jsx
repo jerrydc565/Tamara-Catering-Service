@@ -72,15 +72,23 @@ function Header() {
             About
           </Link>
         </li>
-        <Link
-          to={"/menu"}
-          onClick={() => setNavOpen(false)}
-          className="block w-full"
+
+        <li
+          className={`cursor-pointer border-b-2 pb-2 transition duration-500 ${
+            isActive("/menu")
+              ? "text-[#FFBB00] border-[#FFBB00]"
+              : "border-transparent hover:text-[#FFBB00] hover:border-[#FFBB00]"
+          }`}
         >
-          <li className=" hover:text-[#FFBB00] hover:border-b-2 flex  hover:border-[#FFBB00] pb-2 transition duration-500 relative group">
-            <span className="hover:text-[#FFBB00]"> Menu</span>
-          </li>
-        </Link>
+          <Link
+            to={"/menu"}
+            onClick={() => setNavOpen(false)}
+            className="block w-full"
+          >
+            Menu
+          </Link>
+        </li>
+
         <li
           className={`cursor-pointer border-b-2 pb-2 transition duration-500 ${
             isActive("/service")
