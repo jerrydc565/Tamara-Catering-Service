@@ -67,37 +67,82 @@ function ServiceComponent() {
         Premium Catering Service
       </motion.h2>
       <motion.section
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 p-4 md:p-10"
+        className=" p-4 md:p-10"
         style={{ fontFamily: "poppins" }}
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
       >
-        {cardData.map((card, idx) => (
-          <motion.div
-            key={idx}
-            className="w-full rounded-2xl overflow-hidden bg-[#fff8de] shadow-lg flex flex-col"
-            variants={cardVariants}
-            whileHover={{
-              scale: 1.04,
-              boxShadow: "0 8px 32px #FFBB0080",
-            }}
-            transition={{ type: "spring", stiffness: 300, damping: 18 }}
-          >
-            <img
-              src={card.img}
-              alt={card.title}
-              className="w-full h-48 md:h-64 lg:h-80 object-cover object-center"
-            />
-            <h3 className="font-semibold text-xl md:text-2xl mt-5 mb-1 m-3">
-              {card.title}
+        <motion.div className="w-full   overflow-hidden mt-20 flex justify-between">
+          <div className="h-70 w-130 overflow-hidden rounded-2xl">
+            <img src={wedding} alt="" className="h-full w-full object-cover" />
+          </div>
+
+          <div className="w-[50%]">
+            <h4 className="font-bold text-[17px] text-[#634900] mt-3 ml-3 mr-3">
+              Service
+            </h4>
+            <h3 className="font-semibold text-xl md:text-2xl  mb-1 ml-3 mr-3 ">
+              Wedding Events
             </h3>
             <p className="m-3 text-[15px] md:text-base text-[#6b6b6b]">
-              {card.desc}
+              Wedding. Why we have the concept of inviting all our relatives,
+              friends and known ones? Its because, when a family celebrates an
+              event means, its an occasion, when lot of people celebrates an
+              event means, it turns as a feast. If there any feast occurs
+              without food?? We are here to make a memorable experience for your
+              guests by pampering their taste buds.
             </p>
-          </motion.div>
-        ))}
+          </div>
+        </motion.div>
+        <motion.div className="w-full   overflow-hidden mt-20 flex justify-between">
+          <div className="w-[50%]">
+            <h4 className="font-bold text-[17px] text-[#634900] mt-3 ml-3 mr-3">
+              Service
+            </h4>
+            <h3 className="font-semibold text-xl md:text-2xl  mb-1 ml-3 mr-3 ">
+              Birthday Event
+            </h3>
+            <p className="m-3 text-[15px] md:text-base text-[#6b6b6b]">
+              "Make every birthday a memorable one with our birthday
+              photography. Whether it’s a child's first birthday or a milestone
+              celebration, we capture the joy, excitement, and love of the day
+              and preserve it forever. At Venus Catering Service, we take care
+              of the happiness of your guests by offering them amazing food on
+              behalf of you.
+            </p>
+          </div>
+          <div className="h-70 w-130 overflow-hidden rounded-2xl ">
+            <img src={birthday} alt="" className="h-full w-full object-cover" />
+          </div>
+        </motion.div>
+        <motion.div className="w-full   overflow-hidden mt-20 flex justify-between">
+          <div className="h-70 w-130 overflow-hidden rounded-2xl ">
+            <img
+              src={corporate}
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+          <div className="w-[50%]">
+            <h4 className="font-bold text-[17px] text-[#634900] mt-3 ml-3 mr-3">
+              Service
+            </h4>
+            <h3 className="font-semibold text-xl md:text-2xl  mb-1 ml-3 mr-3 ">
+              Corporate Events
+            </h3>
+            <p className="m-3 text-[15px] md:text-base text-[#6b6b6b]">
+              From corporate events to business occasions or milestone
+              celebrations, our event catering team captures the heart of their
+              audiences on their special occasions. We focus on delivering the
+              customized delicacies of different types. We make sure all the
+              audience feel good about the food too and that make your event
+              unique.
+            </p>
+          </div>
+        </motion.div>
       </motion.section>
     </main>
   );

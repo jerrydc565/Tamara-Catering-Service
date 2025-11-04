@@ -45,11 +45,11 @@ const cardVariants = {
 function WhyChooseUs() {
   return (
     <main
-      className="bg-[url(/image/blackbackground.jpg)] p-6 md:p-20 w-full bg-center bg-cover text-white"
+      className="bg-white p-6 md:p-20 w-full bg-center bg-cover text-[#]"
       style={{ fontFamily: "poppins" }}
     >
       <motion.p
-        className="text-center mb-3 text-[#FFBB00] text-sm md:text-base"
+        className="text-center mb-3 text-[#453300] text-sm md:text-base"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.7 }}
@@ -64,8 +64,8 @@ function WhyChooseUs() {
         viewport={{ once: true, amount: 0.7 }}
         transition={{ duration: 0.7, delay: 0.2 }}
       >
-        Leave Your Guests <span className="text-[#FFBB00]">Speechless</span>{" "}
-        With Our <span className="text-[#FFBB00]">Fabulous Food!</span>
+        Leave Your Guests <span className="text-[#453300]">Speechless</span>{" "}
+        With Our <span className="text-[#453300]">Fabulous Food!</span>
       </motion.h2>
       <motion.section
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
@@ -83,12 +83,12 @@ function WhyChooseUs() {
             transition={{ type: "spring", stiffness: 300, damping: 18 }}
           >
             <i
-              className={`fa-solid ${card.icon} text-3xl text-[#FFFFFF] mb-3`}
+              className={`fa-solid ${card.icon} text-3xl text-[#494949] mb-3`}
             ></i>
-            <h3 className="font-semibold text-lg md:text-xl mb-2 text-[#FFBB00]">
+            <h3 className="font-semibold text-lg md:text-xl mb-2 text-[#453300]">
               {card.title}
             </h3>
-            <p className="text-[14px] md:text-[15px] text-white/90">
+            <p className="text-[14px] md:text-[15px] text-[#494949]">
               {card.desc}
             </p>
           </motion.div>
