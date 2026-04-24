@@ -73,21 +73,7 @@ function Header() {
           </Link>
         </li>
 
-        <li
-          className={`cursor-pointer border-b-2 pb-2 transition duration-500 ${
-            isActive("/menu")
-              ? "text-[#FFBB00] border-[#FFBB00]"
-              : "border-transparent hover:text-[#FFBB00] hover:border-[#FFBB00]"
-          }`}
-        >
-          <Link
-            to={"/menu"}
-            onClick={() => setNavOpen(false)}
-            className="block w-full"
-          >
-            Menu
-          </Link>
-        </li>
+        
 
         <li
           className={`cursor-pointer border-b-2 pb-2 transition duration-500 ${
